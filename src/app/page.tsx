@@ -1,6 +1,11 @@
 import Image from 'next/image'
+import { logger } from '../../logger';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+export default async function Home() {
+  logger.info('NEXT-APP info test');
+  logger.error('NEXT-APP error test');
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
